@@ -30,7 +30,7 @@ while True :
                 print("Invalid Link provided :(")
 
         while True : 
-            name = input("By what name it should be called (spaces will be  removed) : ")
+            name = input("By what name it should be called (spaces will be removed) : ")
             name = name.replace(" ", "")
             df = pd.read_csv("file/items.csv")
             if input("Confirm? (y/n) : ").lower() == "y" :
@@ -41,7 +41,6 @@ while True :
                     df = pd.read_csv("file/items.csv")
                     df = pd.concat([newdf, df])
                     df.to_csv("file/items.csv", index=False)
-                    rn.run()
                     time.sleep(0.5)
                     break
                 else : 
@@ -90,7 +89,7 @@ while True :
                     time.sleep(0.5)
                 else :
                     df2 = pd.read_csv(f"data/{df.loc[choice, "item"]}.csv")
-                    if input("WARNING : THIS ITEM WILL NO LONGER EXIST IN ANY OF THE CSV    FILES!\nType CONFIRM to confirm : ").upper() == "CONFIRM" :
+                    if input("WARNING : THIS ITEM WILL NO LONGER EXIST IN ANY OF THE CSV FILES!\nType CONFIRM to confirm : ").upper() == "CONFIRM" :
                         fileloc = f"data/{df.loc[choice, "item"]}.csv"
                         os.remove(fileloc)
                         df.drop(choice, axis=0, inplace=True)
