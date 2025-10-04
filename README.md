@@ -10,3 +10,5 @@ Time, Validators, Pandas, OS, Warnings, BS4 & Requests
 1. To insert FlipKart, Ajio, Meesho and many other ecommerce websites.
 2. Create a delete all command which clears all the items in just one command.
 3. Another program which plots a graph using matplotlib so that analysis can be done on the price of the item. Thus, knowing about when does this item costs much less in an year.
+4. Insert the selenium library to help with dynamic webpage.
+5. Convert into webapp using StreamLit.
